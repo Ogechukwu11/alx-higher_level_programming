@@ -1,6 +1,8 @@
 PYTHON: GETTING STARTED
+
 Hello, World!
 Let's start with the classic "Hello, World!" program in Python. It's as simple as this:
+
 print("Hello, World!")
 
 Python's readability shines even in this basic example. You don't need semicolons or complex syntax—just plain, easy-to-understand code.
