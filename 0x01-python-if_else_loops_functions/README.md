@@ -32,28 +32,36 @@ Break and Continue Statements
 2. continue skips the current iteration and moves to the next.
 
 Else Clauses on Loops
+
 Use else after a loop to specify code that runs if the loop completes without break.
 
 The Pass Statement
+
 pass does nothing; it's a placeholder. Use it when you need a statement for syntactic correctness but no action.
 
 Range
+
 range generates a sequence of numbers. Example: range(1, 5) gives [1, 2, 3, 4].
 
 Functions
+
 Functions are blocks of reusable code. Define with def. 
 Example:
 def my_function():
     # Code here
 
 Return in Functions
+
 Use return to send a result from a function. If no return is used, it returns None.
 
 Scope of Variables
+
 Variables can have local or global scope, affecting where they can be accessed.
 
 Traceback
+
 A traceback is an error message that helps you identify issues in your code.
 
 Arithmetic Operators
+
 Use operators like +, -, *, / for basic math operations.	
