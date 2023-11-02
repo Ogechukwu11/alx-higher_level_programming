@@ -13,6 +13,7 @@ Import Statement:
 Example - Math Module:
 
 import math
+
 result = math.sqrt(16)  # Use the "sqrt" function from the math module.
 
 How to Use:
@@ -27,9 +28,11 @@ Benefits:
 Prevent Execution When Imported:
 
 To ensure that specific code only runs when the script is the main program (not when imported), use the following condition:
+
 if __name__ == "__main__":
 	# Code here will execute only when the script is run as the main program.
 Example - Prevent Execution When Imported:
+
 def my_function():
 	print("This code runs when the script is executed directly.")
 
