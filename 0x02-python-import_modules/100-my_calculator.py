@@ -2,16 +2,19 @@
 if __name == "__main__":
     from calculator_1 import add, sub, mul, div
     from sys import argv
-
-    if len(sys.argv) - 1 != 3:
+    av = len(argv)
+    if av != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
-        sys.exit(1)
+        exit(1)
 
     signs = {"+": add, "-": sub, "*": mul, "/": div}
-    if sys.argv[2] not in list(signs.keys()):
+    if argv[2] in signs:
+        i = int(argv[1])
+        j = int(argv[3])
+        sign = signs[argv[2]]
+        reult = sign(i, j)
+        print("{:d} {:s} {:d} = {:d}".foramat(i, argv[2], j, result))
+    else:
         print{"Unknown operator. Available operators: +, -, * and /")
-        sys.exit(1)
-
-    i = int(sys.argv[1])
-    j = int(sys.argv[3])
-    print("{:d} {:s} {:d} = {:d}".foramat(i, sys.argv[2], b. signs[sys.argv[2]](i, j)))
+        exit(1)
+    exit(0)
