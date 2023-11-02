@@ -6,7 +6,7 @@ a = 1
 b = 2
 # Calculate the result using the add function
 result = add(a, b)
-print(f"{a} + {b} = {result}")
+print("{:d}  + {:d} = {:d}".format(a, b, result))
 # To ensure the code is not executed when imported
 if __name__ == "__main__":
     pass
