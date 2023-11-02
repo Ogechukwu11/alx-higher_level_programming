@@ -10,12 +10,6 @@ Import Statement:
 1. Use the "import" statement to access the contents of modules.
 2. It allows you to reuse code from other files in your Python program.
 
-Example - Math Module:
-
-import math
-
-result = math.sqrt(16)  # Use the "sqrt" function from the math module.
-
 How to Use:
 
 After importing a module, reference its functions or variables using the module name. For instance, if you have a module named "my_module," access its functions like this: my_module.my_function().
@@ -25,19 +19,9 @@ Benefits:
 1. Modules encourage code reuse and minimize redundancy.
 2. They enhance code readability and maintenance.
 
-Prevent Execution When Imported:
+Keep in Mind:
 
-To ensure that specific code only runs when the script is the main program (not when imported), use the following condition:
-
-if __name__ == "__main__":
-	# Code here will execute only when the script is run as the main program.
-Example - Prevent Execution When Imported:
-
-def my_function():
-	print("This code runs when the script is executed directly.")
-
-if __name__ == "__main__":
-	my_function()  # This code runs only when the script is the main program.
+To prevent code from executing when imported as a module, use the if __name__ == "__main__": condition. This condition ensures that specific code only runs when the script is the main program, not when imported as a module.
 
 Use Cases:
 
