@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 if __name == "__main__":
     from calculator_1 import add, sub, mul, div
-    import sys
+    from sys import argv
 
     if len(sys.argv) - 1 != 3:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
@@ -14,4 +14,4 @@ if __name == "__main__":
 
     i = int(sys.argv[1])
     j = int(sys.argv[3])
-    print("{} {} {} = {}".foramat(i, sys.argv[2], b. signs[sys.argv[2]](i, j)))
+    print("{:d} {:s} {:d} = {:d}".foramat(i, sys.argv[2], b. signs[sys.argv[2]](i, j)))
