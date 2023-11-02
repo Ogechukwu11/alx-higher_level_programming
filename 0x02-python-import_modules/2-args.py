@@ -1,6 +1,6 @@
 #!/usr/bin/python3
+""" prints the number of and the list of its arguments."""
 if __name__ == "__main__":
-    """ prints the number of and the list of its arguments."""
     import sys
 
     arg = sys.argv
