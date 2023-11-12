@@ -7,12 +7,12 @@ if __name__ == "__main__":
     num_argv = len(arg) - 1
 
     if num_argv > 1:
-        print("{} argument:".format(num_argv))
+        print("{} arguments:".format(num_argv))
         for i in range(1, num_argv + 1):
             print("{}: {}".format(i, arg[i]))
 
     elif num_argv == 0:
-        print("{} argument.".format(num_argv))
+        print("{} arguments.".format(num_argv))
 
     else:
         print("{} argument:".format(num_argv))
