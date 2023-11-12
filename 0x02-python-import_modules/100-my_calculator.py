@@ -1,20 +1,30 @@
 #!/usr/bin/python3
 if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
-    from sys import argv
-    av = len(argv)
-    if av != 4:
+    import sys
+
+    if len(sys.argv) != 4:
         print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
+    a = int(sys.argv[1])
+    operator = sys.argv[2]
+    b = int(sys.argv[3])
 
-    signs = {"+": add, "-": sub, "*": mul, "/": div}
-    if argv[2] in signs:
-        i = int(argv[1])
-        j = int(argv[3])
-        sign = signs[argv[2]]
-        reult = sign(i, j)
-        print("{:d} {:s} {:d} = {:d}".foramat(i, argv[2], j, result))
-    else:
-        print{"Unknown operator. Available operators: +, -, * and /")
+    # Check if the operator is valid
+    if operator not in ('+', '-', '*', '/'):
+        print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
-    sys.exit(0)
+
+    result = None
+
+    # Perform the operation based on the operator provided
+    if operator == '+':
+        result = add(a, b)
+    elif operator == '-':
+        result = subtract(a, b)
+    elif operator == '*':
+        result = multiply(a, b)
+    elif operator == '/':
+        result = divide(a, b)
+
+    print("{} {} {} = {:d}".format(a, operator, b, result))
