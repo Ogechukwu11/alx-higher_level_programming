@@ -21,10 +21,10 @@ if __name__ == "__main__":
     if operator == '+':
         result = add(a, b)
     elif operator == '-':
-        result = subtract(a, b)
+        result = sub(a, b)
     elif operator == '*':
-        result = multiply(a, b)
+        result = mul(a, b)
     elif operator == '/':
-        result = divide(a, b)
+        result = div(a, b)
 
     print("{:d} {:s} {:d} = {:d}".format(a, operator, b, result))
