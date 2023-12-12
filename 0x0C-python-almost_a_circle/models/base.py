@@ -1,6 +1,7 @@
 #!/usr/bin/python3
-
 """ This is the base of all classes """
+
+
 class Base:
     """ creating a private class attribute """
     __nb_objects = 0
