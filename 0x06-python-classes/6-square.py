@@ -18,11 +18,11 @@ class Square:
     @size.setter
     def size(self, value):
         """ Setting the private attribute size to value """
-        self.__size = value
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         elif size < 0:
             raise ValueError("size must be >= 0")
+        self.__size = value
 
     @property
     def position(self):
@@ -33,8 +33,8 @@ class Square:
     def position(self, value):
         """ To set position """
         if (not isinstance(value, tuple) or len(value) != 2 or
-                not all(isinstance(i, int) for i in value) or
-                not all(i >= 0 for i in value)):
+                not all(isinstance(n, int) for n in value) or
+                not all(n >= 0 for n in value)):
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
