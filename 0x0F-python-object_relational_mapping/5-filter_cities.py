@@ -13,7 +13,7 @@ if __name__ == "__main__":
                 INNER JOIN states ON states.id=cities.state_id \
                 WHERE states.name=%s ORDER BY cities.id ASC", (sys.argv[4],))
     query_rows = cur.fetchall()
-    for row in query_rows:
-        print(row)
+    tmp = list(row[0] for row in query_rows)
+    print(*tmp, sep=", ")
     cur.close()
     conn.close()
