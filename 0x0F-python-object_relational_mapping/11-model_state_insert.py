@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script that prints the first State object from the database
+Script that adds the State object “Louisiana” to the database
+Using module SQLAlchemy
 """
 
 from model_state import Base, State
@@ -12,15 +13,15 @@ if __name__ == "__main__":
     # create an engine
     engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
         argv[1], argv[2], argv[3]), pool_pre_ping=True)
-
-    Session = sessionmaker()
-    session = Session(bind=engine)
-
+    # create a configured "Session" class
+    Session = sessionmaker(bind=engine)
+    # create a Session
+    session = Session()
     Base.metadata.create_all(engine)
-    s_tate = session.query(State).order_by(State.id).first()
 
-    if s_tate:
-        print("{}: {}".format(s_tate.id, s_tate.name))
-    else:
-        print("Nothing")
+    add_state = State(name="Louisiana")
+    session.add(add_state)
+    # commit and close session
+    session.commit()
+    print(add_state.id)
     session.close()
