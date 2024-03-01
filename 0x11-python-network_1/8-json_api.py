@@ -14,9 +14,8 @@ if __name__ == "__main__":
     url_arg = "http://0.0.0.0:5000/search_user"
     info = {"q": q}
     result = requests.post(url_arg, data=info)
-    json_info = result.json()
-
     try:
+        json_info = result.json()
         if json_info:
             print("[{}] {}".format(json_info.get('id'), json_info.get('name')))
         else:
